@@ -34,19 +34,26 @@ This project is intended for learning purposes and demonstrates how low-level as
 ---
 
 ## Project Structure
-aws/
-├── main.c # Main loop and connection handler
-├── aws.h # Struct definitions and state machine
-├── static/ # Static files (e.g., index.html, style.css)
-├── dynamic/ # Dynamic files served via AIO
-├── utils/
-│ ├── debug.h # Debug macros (logging, color print)
-│ ├── util.h # Generic helper functions
-│ ├── sock_util.c # Socket setup utilities
-│ ├── w_epoll.h # Epoll wrapper for readability
-├── Makefile # Build script
-├── README.md # This file
 
+- main.c contains the main loop and connection handling logic.
+
+- aws.h defines core data structures and the server’s finite state machine.
+
+- The static/ directory holds static files such as index.html and style.css served directly over HTTP.
+
+- The dynamic/ directory is used for dynamic content served using Linux Asynchronous I/O.
+
+- debug.h for logging macros and color-coded output,
+
+- util.h for miscellaneous helper functions,
+
+- sock_util.c for socket creation and setup,
+
+- w_epoll.h as a wrapper around epoll to simplify usage.
+
+- The Makefile provides build automation for the entire project.
+
+- README.md (this file) contains project documentation.
 
 ---
 
